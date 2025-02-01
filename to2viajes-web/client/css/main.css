@@ -1,0 +1,324 @@
+/* Estilos para el banner */
+.banner {
+    height: 400px;
+    width: 100%;
+    background: url('../assets/banner.jpg') no-repeat center center/cover; /* Imagen de fondo*/ 
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative; /* Necesario para z-index */
+    z-index: 1; /* Asegura que el banner esté detrás del menú */
+}
+.banner-text{
+    width: 40% !important;
+    align-items: left;
+    justify-content: left;
+    text-align: left;
+}
+.text-h1{
+    color: #0040ff !important; 
+}
+.text-p{
+    color: #a71414 !important; 
+}
+
+/* Estilos para el menú */
+#mainNavbar {
+    position: absolute; /* Posicionamiento absoluto inicial */
+    top: 0; /* Pegado a la parte superior */
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Asegura que el menú esté por encima del banner */
+    background: transparent !important; /* Fondo transparente inicial */
+    transition: all 0.3s ease; /* Transición suave */
+}
+
+/* Estilos para el menú sticky */
+#mainNavbar.sticky {
+    position: fixed; /* Cambia a fixed para que sea sticky */
+    background: white !important; /* Fondo blanco */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Estilos base del menú */
+.navbar-nav .nav-link {
+    color: #0040ff !important; /* Color del texto inicial */
+    margin: 0 15px;
+    font-weight: 500;
+    position: relative;
+    padding-bottom: 5px; /* Espacio para el subrayado */
+    text-decoration: none; /* Elimina el subrayado por defecto */
+}
+
+/* Efecto de subrayado animado */
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px; /* Grosor del subrayado */
+    background-color: #007bff; /* Color del subrayado */
+    transform: scaleX(0); /* Inicia sin subrayado */
+    transform-origin: center;
+    transition: transform 0.4s ease; /* Duración de la animación */
+}
+
+/* Animación al hacer hover */
+.navbar-nav .nav-link:hover::after {
+    transform: scaleX(1); /* Subrayado completo */
+    transform-origin: center;
+}
+
+/* Color de enlaces cuando el menú tiene fondo blanco */
+#mainNavbar.scrolled .nav-link {
+    color: #333 !important;
+}
+
+/* Efecto de subrayado cuando el menú tiene fondo blanco */
+#mainNavbar.scrolled .nav-link::after {
+    background-color: #007bff; /* Color del subrayado */
+}
+
+/* Ajuste para el contenido debajo del banner */
+main {
+    padding-top: 20px; /* Espacio adicional */
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+    .navbar-nav .nav-link {
+        margin: 5px 0; /* Menos espacio entre enlaces en móviles */
+    }
+
+    .banner h1 {
+        font-size: 1.5rem; /* Tamaño de fuente más pequeño en móviles */
+    }
+
+    .banner {
+        margin-top: 56px; /* Altura del menú en móviles */
+    }
+}
+.logo {
+    width: auto; /* Ancho deseado */
+    height: 40px; /* Mantiene la proporción */
+}
+
+/* CSS para el botón animado */
+.cta-button {
+    display: inline-block;
+    padding: 1em 1.5em;
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: #fff;
+    background: linear-gradient(45deg, #4b6bfa, #3969ec);
+    border-radius: 50px;
+    box-shadow: 0 5px 15px rgba(83, 181, 247, 0.4);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    animation: pulse 2s infinite;
+}
+
+/* Efecto hover */
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(83, 181, 247, 0.4);
+    animation: none;
+}
+
+/* Efecto "shine" al hacer hover */
+.cta-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,0.3),
+        transparent
+    );
+    transition: 0.5s;
+}
+
+.cta-button:hover::before {
+    left: 100%;
+}
+
+/* Animación de pulso constante */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+/* Efecto al hacer clic */
+.cta-button:active {
+    transform: scale(0.95);
+}
+
+/* Versión móvil */
+@media (max-width: 768px) {
+    .cta-button {
+        font-size: 1rem;
+        padding: 0.8em 2em;
+    }
+}
+
+/* CSS para el botón animado */
+.cta-button1 {
+    display: inline-block;
+    padding: 1em 1.5em;
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: #3969ec;
+    background: linear-gradient(45deg, #c6c6c9, #fcfcfc);
+    border-radius: 50px;
+    box-shadow: 0 5px 15px rgba(230, 233, 235, 0.4);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    animation: pulse 2s infinite;
+}
+
+/* Efecto hover */
+.cta-button1:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(83, 181, 247, 0.4);
+    animation: none;
+}
+
+/* Efecto "shine" al hacer hover */
+.cta-button1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,0.3),
+        transparent
+    );
+    transition: 0.5s;
+}
+
+.cta-button1:hover::before {
+    left: 100%;
+}
+
+/* Efecto al hacer clic */
+.cta-button1:active {
+    transform: scale(0.95);
+}
+
+/* Versión móvil */
+@media (max-width: 768px) {
+    .cta-button1 {
+        font-size: 1rem;
+        padding: 0.8em 2em;
+    }
+}
+
+.about-section {
+    padding: 60px 0;
+}
+
+.about-section h2 {
+    color: #0040ff;
+    margin-bottom: 20px;
+}
+
+.about-section p {
+    color: #333;
+    line-height: 1.8;
+}
+
+.about-section img {
+    width: 80%;
+    height: auto;
+    border-radius: 8px;
+    margin-left: 20px;
+}
+.services-section {
+    padding: 60px 0;
+}
+
+.services-section h2 {
+    color: #0040ff;
+    margin-bottom: 20px;
+}
+
+.services-section p {
+    color: #333;
+    line-height: 1.8;
+}
+
+.services-section img {
+    width: 100%;
+    height: auto;
+}
+/* Estilo inicial: elementos ocultos */
+.animatable {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Estilo cuando el elemento es visible */
+.animatable.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.box {
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3);
+  }
+  .box1 {
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+  }
+
+h2 {
+    display: inline-block;
+    position: relative !important; /* Necesario para posicionar el pseudoelemento */
+    padding-left: 30px; /* Espacio para la línea */
+}
+
+h2::before {
+    content: ''; /* No se necesita texto */
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 30px; /* Longitud de la línea */
+    height: 2px; /* Grosor de la línea */
+    background-color: #0040ff;; /* Color de la línea */
+    transform: translateY(-50%); /* Centra la línea verticalmente */
+}
+h2::after {
+    content: ''; /* No se necesita texto */
+    position: absolute;
+    top: 50%;
+    left: -50;
+    width: 30px; /* Longitud de la línea */
+    height: 2px; /* Grosor de la línea */
+    background-color: #0040ff;; /* Color de la línea */
+    transform: translateY(-50%); /* Centra la línea verticalmente */
+}
+
+.fullw{
+    width: 100% !important;
+}
+.grad-hero{
+    background: linear-gradient(45deg, #4b6bfa, #3969ec);
+}
