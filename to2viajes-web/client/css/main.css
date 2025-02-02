@@ -140,9 +140,9 @@ main {
       position: absolute;
       top: 60px;
       left: 0;
-      width: auto%;
-      margin-left: 15px;
-      margin-right: 15px;
+      right: 0;
+      margin: auto;
+      width: 90%;
       height: auto;
       background-color: #ffffff;
       z-index: 9999;
