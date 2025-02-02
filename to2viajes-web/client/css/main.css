@@ -32,7 +32,7 @@
         text-align: left;
     }
     .banner {
-        height: 100vh;
+        height: 550px !important;
         width: 100%;
         background: url('../assets/banner.jpg') no-repeat center center/cover; /* Imagen de fondo*/ 
         color: white;
