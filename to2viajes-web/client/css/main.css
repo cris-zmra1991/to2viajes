@@ -23,6 +23,35 @@
 .text-p{
     color: #a71414 !important; 
 }
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+    .banner-text{
+        width: 90% !important;
+        align-items: left;
+        justify-content: left;
+        text-align: left;
+    }
+    .banner {
+        height: 700px;
+        width: 100%;
+        background: url('../assets/banner.jpg') no-repeat center center/cover; /* Imagen de fondo*/ 
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        position: relative; /* Necesario para z-index */
+        z-index: 1; /* Asegura que el banner esté detrás del menú */
+    }
+    .text-h1{
+        color: #0040ff !important; 
+
+    }
+    .text-p{
+        color: #a71414 !important; 
+    }
+}
+
 
 /* Estilos para el menú */
 #mainNavbar {
@@ -94,9 +123,13 @@ main {
     }
 
     .banner h1 {
-        font-size: 1.5rem; /* Tamaño de fuente más pequeño en móviles */
+        font-size: 3rem; /* Tamaño de fuente más pequeño en móviles */
+        padding-bottom: 20px;
     }
-
+    .banner p {
+        font-size: 2rem; /* Tamaño de fuente más pequeño en móviles */
+        padding-bottom: 20px;
+    }
     .banner {
         margin-top: 56px; /* Altura del menú en móviles */
     }
