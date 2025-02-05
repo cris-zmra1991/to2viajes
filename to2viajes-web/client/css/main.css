@@ -228,7 +228,9 @@ header {
     nav .menu a {
         font-size: 1rem;
     }
-
+    .banner-content {
+        max-width: 80%;
+    }
     .banner-content h1 {
         font-size: 2rem;
     }
