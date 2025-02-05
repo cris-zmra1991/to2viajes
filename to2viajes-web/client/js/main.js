@@ -1,76 +1,64 @@
-window.addEventListener('scroll', function() {
-    const navbar = document.getElementById('mainNavbar');
-    const banner = document.querySelector('.banner');
-    const bannerHeight = banner.offsetHeight; // Altura del banner
+// Función para el manejo del botón de la barra de navegación (Toggler)
+document.addEventListener('DOMContentLoaded', function () {
+    const navbarToggler = document.querySelector('.navbar-toggler');
+    const navbarNav = document.querySelector('.navbar-nav');
 
-    // Cambia a sticky después de pasar el banner
-    if (window.scrollY > bannerHeight) {
-        navbar.classList.add('sticky');
-    } else {
-        navbar.classList.remove('sticky');
+    // Mostrar/ocultar el menú cuando se haga clic en el botón de navegación
+    if (navbarToggler && navbarNav) {
+        navbarToggler.addEventListener('click', function () {
+            navbarNav.classList.toggle('active'); // Alterna la clase active para mostrar/ocultar el menú
+        });
     }
-});
 
-
-// Añade este script para efectos adicionales
-document.querySelector('.cta-button').addEventListener('click', function(e) {
-    e.preventDefault();
+    // Animación de carga para las secciones con la clase 'animatable'
+    const animatableElements = document.querySelectorAll('.animatable');
     
-    // Efecto de onda al hacer clic
-    let ripple = document.createElement('div');
-    ripple.style.position = 'absolute';
-    ripple.style.width = '20px';
-    ripple.style.height = '20px';
-    ripple.style.background = 'rgba(255,255,255,0.4)';
-    ripple.style.borderRadius = '50%';
-    ripple.style.transform = 'translate(-50%, -50%)';
-    ripple.style.pointerEvents = 'none';
-    ripple.style.animation = 'ripple 0.6s linear';
-    
-    // Posicionar la onda
-    const rect = this.getBoundingClientRect();
-    ripple.style.left = `${e.clientX - rect.left}px`;
-    ripple.style.top = `${e.clientY - rect.top}px`;
-    
-    this.appendChild(ripple);
-    
-    // Eliminar la onda después de la animación
-    setTimeout(() => ripple.remove(), 600);
-    
-    // Redirección después de la animación (opcional)
-    setTimeout(() => window.location.href = this.href, 300);
-});
-
-// Añadir animación de ripple
-const style = document.createElement('style');
-style.textContent = `
-    @keyframes ripple {
-        from {
-            transform: translate(-50%, -50%) scale(1);
-            opacity: 1;
-        }
-        to {
-            transform: translate(-50%, -50%) scale(20);
-            opacity: 0;
-        }
-    }
-`;
-document.head.appendChild(style);
-
-document.addEventListener('DOMContentLoaded', function() {
-    const animatables = document.querySelectorAll('.animatable');
-
-    const handleScroll = () => {
-        animatables.forEach((element) => {
-            const rect = element.getBoundingClientRect();
-            if (rect.top < window.innerHeight && rect.bottom > 0) {
+    function handleScroll() {
+        animatableElements.forEach(function (element) {
+            const elementPosition = element.getBoundingClientRect().top;
+            const viewportHeight = window.innerHeight;
+            
+            if (elementPosition < viewportHeight * 0.8) {
                 element.classList.add('visible');
-            } else {
-                element.classList.remove('visible');
             }
         });
-    };
+    }
 
     window.addEventListener('scroll', handleScroll);
-    handleScroll(); // Ejecutar al cargar la página
+    handleScroll(); // Llamamos a esta función al cargar la página para que las animaciones se apliquen también cuando se cargue.
+
 });
+
+// Función para la animación de elementos al cargar la página (solo para banner y secciones específicas)
+window.addEventListener('load', function () {
+    const bannerText = document.querySelector('.banner-text');
+    const ctaButton = document.querySelector('.cta-button');
+    
+    // Aplicar animaciones de entrada al banner
+    if (bannerText && ctaButton) {
+        bannerText.classList.add('fade-in');
+        ctaButton.classList.add('fade-in');
+    }
+});
+
+// Función para cambiar la posición del menú al hacer scroll
+// Obtener el menú y el banner
+const navbar = document.getElementById('mainNavbar');
+const banner = document.querySelector('.banner');
+
+// Establecer la altura del banner
+const bannerHeight = banner.offsetHeight;
+
+// Función para cambiar la posición del menú
+function handleScroll() {
+    if (window.scrollY >= bannerHeight) {
+        navbar.style.position = 'sticky';  // Cambiar a sticky cuando el scroll supera la altura del banner
+        navbar.style.backgroundColor = 'white';  // Cambiar el fondo a blanco
+    } else {
+        navbar.style.position = 'absolute';  // Volver a absolute cuando se esté en la parte superior
+        navbar.style.backgroundColor = 'transparent';  // Volver a fondo transparente
+    }
+}
+
+// Detectar el evento de desplazamiento
+window.addEventListener('scroll', handleScroll);
