@@ -7,55 +7,32 @@
     font-style: normal;
     font-weight: normal;
   }
-html, body {
-    margin: 0px !important;
-}
 body {
     font-family: 'NotoSans', sans-serif !important;
   }
-.menu-bar{
-    position: absolute; 
-    top: 0; 
-    left: 50%; 
-    transform: translateX(-50%);
-    z-index: 10;
-  }
-@media screen and (max-width: 768px) {
-    .menu-bar{
-      width: 100%;
-    }
-  }
-.menu{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 0;
-  }
+
 .logo{
     max-height: 40px;
   }
-.banner{
-    width: 100%;
-    height: auto;
-    background-image: url('../assets/banner.jpg');
-    background-size: cover;
-    background-position: center;
-    display: flex;
-  }
-.banner-content{
+  .mt-6{
     margin-top: 120px;
-    margin-bottom: 50px;
-    width: 60%;
-    display: flex;
-    flex-direction: column;
-  }
+      }
+.wbanner{
+  width: 60%;
+}
   @media screen and (max-width: 768px) {
-    .banner-content{
-      width: 100%;
+    .wbanner{
+      width: 90%;
+    }
+    .bg-menu{
+      background-color: #FFF !important;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(168, 168, 168, 0.4);
     }
   }
-
+.bg-menu{
+  background-color: transparent;
+}
 /* --------------------------------------------------
    BOTON ANIMADO
 -------------------------------------------------- */
@@ -188,7 +165,7 @@ main {
 }
 @media (max-width: 768px) {
   .med50{
-    width: 100%;}
+    width: 90%;}
 }
 
 
