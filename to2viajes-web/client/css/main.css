@@ -50,6 +50,11 @@ body {
     display: flex;
     flex-direction: column;
   }
+  @media screen and (max-width: 768px) {
+    .banner-content{
+      width: 100%;
+    }
+  }
 
 /* --------------------------------------------------
    BOTON ANIMADO
@@ -178,8 +183,13 @@ main {
 .prim-blue{
     color: #0E7BE7;
 }
-
-
+.med50{
+  width: 50%;
+}
+@media (max-width: 768px) {
+  .med50{
+    width: 100%;}
+}
 
 
 /* Estilos para la botonera */
