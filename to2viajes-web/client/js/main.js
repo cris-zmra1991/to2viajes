@@ -62,3 +62,11 @@ function handleScroll() {
 
 // Detectar el evento de desplazamiento
 window.addEventListener('scroll', handleScroll);
+
+// Función para el manejo del botón de menú en dispositivos móviles
+document.getElementById("menuToggle").addEventListener("click", function() {
+    var menu = document.getElementById("mobileMenu");
+    menu.classList.toggle("active");
+    // Cambiar el icono del menú hamburguesa a un ícono de "cerrar" cuando está activo
+     this.classList.toggle("active");
+});

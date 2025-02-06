@@ -55,16 +55,48 @@ body {
     margin: 0 auto;
 }
 .navbar-brand .logo {
-    max-height: 45px;
+    max-height: 35px;
 }
 .navbar-toggler {
     display: none;
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+.navbar-toggler-icon {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    position: relative;
+}
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    transition: transform 0.3s;
+}
+
+.navbar-toggler-icon::before {
+    top: -8px;
+}
+
+.navbar-toggler-icon::after {
+    top: 8px;
 }
 .navbar-nav {
     display: flex;
     justify-content: flex-end;
     gap: 15px;
     list-style-type: none;
+    list-style: none;
+}
+.navbar-nav li {
+    padding: 5px 10px;
 }
 nav ul li a {
     position: relative;
@@ -90,6 +122,10 @@ nav ul li a::after {
 nav ul li a:hover::after {
     width: 100%; /* La línea se expande a todo el ancho del enlace */
 }
+/* Menú oculto en vista móvil */
+#navbarMenu {
+    gap: 20px;
+}
 
 /* --------------------------------------------------
    BANNER Y CONTENIDO
@@ -108,7 +144,7 @@ header {
     background-size: cover;
     background-position: center;
     width: 100%;
-    height: 400px;
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -117,9 +153,11 @@ header {
 }
 
 .banner .banner-content {
-    max-width: 60%;
+    width: 60%;
     animation: fadeIn 1s ease-out;
-    padding: 0px 15px;
+    padding-top: 100px;
+    padding-left: 15px;
+    padding-bottom: 50px;
 }
 
 .text-h1 {
@@ -170,6 +208,14 @@ header {
     }
     to {
         opacity: 1;
+    }
+}
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
     }
 }
 /* Slide in for text and button */
@@ -229,7 +275,7 @@ header {
         font-size: 1rem;
     }
     .banner-content {
-        max-width: 80%;
+        width: 100% !important;
     }
     .banner-content h1 {
         font-size: 2rem;
@@ -241,6 +287,40 @@ header {
 
     .banner-content .btn {
         font-size: 1rem;
+    }
+    .navbar-nav {
+        flex-direction: column;
+        width: 100%;
+        padding: 20px;
+        background-color: var(--color-white); /* Fondo blanco para el menú desplegable */
+    }
+
+    #navbarMenu {
+        display: none;
+    }
+
+    #navbarMenu.active {
+        display: flex;
+    }
+    .mobile-menu {
+        visibility: hidden;
+        animation: fadeOut 1s ease-out;
+    }
+    .mobile-menu .active {
+        visibility: visible;
+        position: absolute;
+        top: 60px;
+        left: 10px;
+        margin-right: 10px;
+        width: 100%;
+        background-color: var(--menu-bg-color);
+        animation: fadeIn 1s ease-out;
+    }
+    .navbar-toggler {
+        display: block; /* Mostrar el botón hamburguesa */
+    }
+    .container {
+        width: 100%;
     }
 }
 
@@ -287,9 +367,7 @@ a:hover {
 
 .container {
     width: 80%;
-    max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
 }
 .shadow {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* sombra suave en la parte inferior */
