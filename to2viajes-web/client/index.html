@@ -42,17 +42,17 @@
 </head>
 <body>
     <!-- Barra de Navegación -->
-	<div class="container menu-bar">
+	<div class="container position-absolute top-0 start-50 translate-middle-x z-3 w-md-100">
         <nav class="navbar navbar-expand-lg">
-            <div class="container-fluid menu">
+            <div class="container-fluid d-flex justify-content-between align-items-center w-100 py-2">
                 <a class="navbar-brand" href="#home">
                     <img src="assets/logo.svg" alt="Logo To2Viajes" class="logo">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                    <ul class="navbar-nav column-gap-4">
+                <div class="collapse navbar-collapse justify-content-end bg-menu p-4 p-md-0" id="navbarNav">
+                    <ul class="navbar-nav column-gap-4 row-gap-3">
                         <li class="nav-item"><a href="#home">Inicio</a></li>
                         <li class="nav-item"><a href="#about">Sobre Nosotros</a></li>
                         <li class="nav-item"><a href="#services">Servicios</a></li>
@@ -65,9 +65,9 @@
 
     <header class="shadow">
         <!-- Banner -->
-		 <section class="banner" id="home">
+		 <section class="w-100 h-auto d-flex bg-cover bg-center" style="background-image: url('assets/banner.jpg');" id="home">
 			<div class="container">
-				<div class="banner-content">
+				<div class="d-flex flex-column mt-6 mb-5 wbanner">
 					<h1 class="fs-1 text-dark-emphasis fw-bold">Tu Solución Integral</h1>
 					<p class="fs-3 text-dark-emphasis">Soluciones personalizadas en transporte de mercancía, venta de productos y mucho más. ¡Simplifica tu vida!</p>
 					<a href="#contact" class="cta-button primary">¡Descubre Más!</a>
@@ -78,22 +78,22 @@
 
     <!-- Sección Sobre Nosotros -->
     <main>
-        <section id="about" class="mt-5">
+        <section id="about" class="mt-5 mb-0">
             <div class="container">
                 <div class="d-flex flex-column flex-md-row">
-                    <div class="col-12 col-md-8">
+                    <div class="col-12 col-md-8 pe-5">
                         <h2 class="fs-2 fw-bold">Sobre Nosotros</h2>
                         <p class="fs-5">Bienvenidos a To2Viajes S.U.R.L, su aliado confiable en Cuba para la adquisición y entrega de productos de todo tipo. Nos especializamos en ofrecer soluciones personalizadas en transporte de mercancías y venta de productos, adaptándonos a las necesidades específicas de cada cliente, ya sean empresas o particulares. Nuestro objetivo es simplificar su vida, asegurando que los productos que necesita lleguen a su destino de manera eficiente y segura en cualquier rincón de Cuba.</p>
                     </div>
                     <div class="col-12 col-md-4">
-                        <img src="assets/delivery-man-receiver-door.jpg" alt="Entrega de productos en Cuba" class="img-fluid">
+                        <img src="assets/paqueteria-compras.png" alt="Entrega de productos en Cuba" class="img-fluid">
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Sección Hero -->
-        <section class="grad-hero mt-5 p-5 shadow">
+        <section class="grad-hero mt-0 p-5 shadow">
             <h3 class="fs-1 fw-bold text-white">Servicio al cliente de excelencia</h3>
             <p class="fs-3 text-white">Estamos disponibles para ti en todo momento para ayudarte.</p>
             <a href="#contact" class="cta-button secondary">¡Contáctanos enseguida!</a>
