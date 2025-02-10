@@ -1,198 +1,153 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
+  <head>
+    <!-- Codificación de caracteres -->
     <meta charset="UTF-8">
+    <!-- Viewport para diseño responsive -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portal web de To2Viajes S.U.R.L, especializado en la adquisición y entrega de productos en Cuba. Ofrecemos soluciones personalizadas en transporte y ventas online.">
-    <meta name="keywords" content="transporte, venta de productos, Cuba, logística, To2Viajes, servicio al cliente">
-    <meta name="author" content="To2Viajes S.U.R.L">
-    
-    <meta property="og:title" content="To2Viajes | Soluciones Personalizadas en Transporte y Ventas">
-    <meta property="og:description" content="Portal web de To2Viajes S.U.R.L, especializado en la adquisición y entrega de productos en Cuba. Ofrecemos soluciones personalizadas en transporte y ventas online.">
-    <!-- <meta property="og:image" content="URL de la imagen destacada">
-    <meta property="og:url" content="URL de tu sitio"> -->
-    
+    <!-- Título de la página (importante para SEO) -->
     <title>To2Viajes | Soluciones Personalizadas en Transporte y Ventas</title>
-   
-    <!-- Estilos personalizados -->
+    <!-- Meta descripción (importante para SEO) -->
+    <meta name="description" content="Portal web de To2Viajes S.U.R.L, especializado en la adquisición y entrega de productos en Cuba. Ofrecemos soluciones personalizadas en transporte y ventas online.">
+    <!-- Palabras clave (opcional, ya que los motores de búsqueda no lo usan mucho hoy en día) -->
+    <meta name="keywords" content="transporte, venta de productos, Cuba, logística, To2Viajes, servicio al cliente, soluciones integrales">
+    <!-- Autor de la página (opcional) -->
+    <meta name="author" content="To2Viajes S.U.R.L">
+    <!-- Favicon (icono de la pestaña del navegador) -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.svg">
+    <!-- Open Graph / Redes Sociales (para compartir en redes sociales) -->
+    <meta property="og:title" content="To2Viajes | Soluciones Personalizadas en Transporte y Ventas">
+    <meta property="og:description" content="Empresa especializada en la adquisición y entrega de productos en Cuba. Ofrecemos soluciones personalizadas en transporte y ventas online.">
+    <meta property="og:image" content="/ruta/a/una/imagen-representativa.jpg">
+    <meta property="og:url" content="https://www.tusitio.com/ruta-de-la-pagina">
+    <!-- Twitter Card (para compartir en Twitter) -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="To2Viajes | Soluciones Personalizadas en Transporte y Ventas">
+    <meta name="twitter:description" content="Empresa especializada en la adquisición y entrega de productos en Cuba. Ofrecemos soluciones personalizadas en transporte y ventas online.">
+    <meta name="twitter:image" content="/ruta/a/una/imagen-representativa.jpg">
+    <!-- Canonical URL (para evitar contenido duplicado) -->
+    <link rel="canonical" href="https://www.tusitio.com/ruta-de-la-pagina">
+    <!-- Hojas de estilo CSS -->
     <link rel="stylesheet" href="css/main.css">
-    <!-- Estilos de Bootstrap -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <!-- Icono de la página -->
-    <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
-    <!-- Incluir Font Awesome desde CDN -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "LocalBusiness",
-            "name": "To2Viajes S.U.R.L",
-            "image": "URL de la imagen",
-            "description": "Portal web de To2Viajes S.U.R.L, especializado en la adquisición y entrega de productos en Cuba. Ofrecemos soluciones personalizadas en transporte y ventas online.",
-            "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "2da entre Norte y Sur, Boyeros",
-                "addressLocality": "La Habana",
-                "postalCode": "10800",
-                "addressCountry": "Cuba"
-            },
-            "telephone": "Teléfono"
-        }
-        </script>
-</head>
+  </head>
 <body>
-    <!-- Barra de Navegación -->
-	<div class="container position-absolute top-0 start-50 translate-middle-x z-3 w-md-100">
-        <nav class="navbar navbar-expand-lg">
-            <div class="container-fluid d-flex justify-content-between align-items-center w-100 py-2">
-                <a class="navbar-brand" href="#home">
-                    <img src="assets/logo.svg" alt="Logo To2Viajes" class="logo">
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-end bg-menu p-4 p-md-0" id="navbarNav">
-                    <ul class="navbar-nav column-gap-4 row-gap-3">
-                        <li class="nav-item"><a href="#home">Inicio</a></li>
-                        <li class="nav-item"><a href="#about">Sobre Nosotros</a></li>
-                        <li class="nav-item"><a href="#services">Servicios</a></li>
-                        <li class="nav-item"><a href="#contact">Contacto</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+  <div class="topp" id="inicio"></div>
+  <!-- Navbar HTML -->
+  <nav class="navbar">
+    <div class="navbar-container">
+        <!-- Logo -->
+        <a href="#" class="logo">
+            <img src="assets/logo.svg" alt="Logo">
+        </a>
+
+        <!-- Menú Desktop -->
+        <ul class="nav-menu">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#about">Nosotros</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+
+        <!-- Botón Hamburguesa Mobile -->
+        <button class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
     </div>
+  </nav>
+  <header class="container-shadow">
+    <div class="banner">
+      <div class="banner-text">
+        <h1 class="text-xl text-lg-2xl mb-3">Tu Solución Integral</h1>
+        <p class="text-lg text-lg-xl mb-2">Soluciones personalizadas en transporte de mercancía, venta de productos y mucho más. ¡Simplifica tu vida!</p>
+        <a href="#contact" class="cta-button primary">¡Descubre Más!</a>
+      </div>
+      <div class="banner-image">
+        <img src="assets/repartidor-cajas-paqueteria.webp">
+      </div>
+    </div>
+    <div class="bottomm" id="about"></div>
+  </header>
 
-    <header class="shadow">
-        <!-- Banner -->
-		 <section class="w-100 h-auto d-flex bg-cover bg-center" style="background-image: url('assets/banner.jpg');" id="home">
-			<div class="container">
-				<div class="d-flex flex-column mt-6 mb-5 wbanner">
-					<h1 class="fs-1 text-dark-emphasis fw-bold">Tu Solución Integral</h1>
-					<p class="fs-3 text-dark-emphasis">Soluciones personalizadas en transporte de mercancía, venta de productos y mucho más. ¡Simplifica tu vida!</p>
-					<a href="#contact" class="cta-button primary">¡Descubre Más!</a>
-				</div>
-			</div>
-		</section>
-    </header>
-
-    <!-- Sección Sobre Nosotros -->
-    <main>
-        <section id="about" class="mt-5 mb-0">
-            <div class="container">
-                <div class="d-flex flex-column flex-md-row">
-                    <div class="col-12 col-md-8 pe-5">
-                        <h2 class="fs-2 fw-bold">Sobre Nosotros</h2>
-                        <p class="fs-5">Bienvenidos a To2Viajes S.U.R.L, su aliado confiable en Cuba para la adquisición y entrega de productos de todo tipo. Nos especializamos en ofrecer soluciones personalizadas en transporte de mercancías y venta de productos, adaptándonos a las necesidades específicas de cada cliente, ya sean empresas o particulares. Nuestro objetivo es simplificar su vida, asegurando que los productos que necesita lleguen a su destino de manera eficiente y segura en cualquier rincón de Cuba.</p>
-                    </div>
-                    <div class="col-12 col-md-4">
-                        <img src="assets/paqueteria-compras.png" alt="Entrega de productos en Cuba" class="img-fluid">
-                    </div>
+  <!-- Sección Sobre Nosotros -->
+  <main>
+    <section class="section">
+        <div class="container my-5">
+            <div class="grid-container">
+                <div class="grid-col-8">
+                    <h2 class="text-xl">Sobre Nosotros</h2>
+                    <p class="text-lg">Bienvenidos a To2Viajes S.U.R.L, su aliado confiable en Cuba para la adquisición y entrega de productos de todo tipo. Nos especializamos en ofrecer soluciones personalizadas en transporte de mercancías y venta de productos, adaptándonos a las necesidades específicas de cada cliente, ya sean empresas o particulares.</p>
                 </div>
-            </div>
-        </section>
-
-        <!-- Sección Hero -->
-        <section class="grad-hero mt-0 p-5 shadow">
-            <h3 class="fs-1 fw-bold text-white">Servicio al cliente de excelencia</h3>
-            <p class="fs-3 text-white">Estamos disponibles para ti en todo momento para ayudarte.</p>
-            <a href="#contact" class="cta-button secondary">¡Contáctanos enseguida!</a>
-        </section>
-
-        <!-- Sección de Servicios -->
-        <section id="services" class="mt-5">
-            <div class="container">
-                <h2 class="fs-2 fw-bold">Nuestros Servicios</h2>
-                <div class="row">
-                    <div class="col-4">
-                        <div class="card">
-                            <img src="assets/compras-online.jpg" alt="Servicio de compra online" class="card-img-top">
-                            <div class="card-body">
-                                <h5 class="card-title">Compra de productos</h5>
-                                <p class="card-text">Adquirimos por ti cualquier tipo de productos en las tiendas online.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-4">
-                        <div class="card">
-                            <img src="assets/transportacion-y-entregas.jpg" alt="Servicio de transporte y entrega" class="card-img-top">
-                            <div class="card-body">
-                                <h5 class="card-title">Transporte y entrega</h5>
-                                <p class="card-text">Llevamos tus productos hasta tu puerta, en cualquier parte de Cuba.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-4">
-                        <div class="card">
-                            <img src="assets/atencion-a-clientes.jpg" alt="Servicio de seguimiento y soporte" class="card-img-top">
-                            <div class="card-body">
-                                <h5 class="card-title">Seguimiento y Soporte</h5>
-                                <p class="card-text">Hacemos seguimiento de tus pedidos y te mantenemos al pendiente.</p>
-                            </div>
-                        </div>
-                    </div>
+                <div class="grid-col-4">
+                    <div class="container-shadow container-fit radius-1"><img class="m-2 img-about" src="assets/delivery-man-receiver-door.jpg" alt="Entrega de productos en Cuba" class="img-fluid"></div>
                 </div>
-            </div>
-        </section>
-
-        <!-- Sección de Contacto -->
-        <section id="contact" class="mt-5">
-        <div class="container d-flex flex-column flex-md-row justify-content-between">
-            <div class="flex-column med50">
-                <h2 class="fs-2 fw-bold">Contáctanos</h2>
-                <p>Deja tu pregunta y enseguida te respondemos.</p>
-                <div class="form-container">
-                <form>
-                    <div class="form-floating mb-2">
-                        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-                        <label for="floatingInput">Correo electrónico</label>
-                      </div>
-                      <div class="form-floating mb-2">
-                        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-                        <label for="floatingInput">Teléfono</label>
-                      </div>
-                      <div class="form-floating mb-2">
-                        <textarea class="form-control" rows="3" placeholder="Haz tu pregunta aquí" id="floatingTextarea"></textarea>
-                        <label for="floatingTextarea">Deja tu pregunta aquí</label>
-                      </div>
-                    <button type="submit" class="btn btn-primary">Enviar</button>
-                  </form>
-                </div>
-            </div>
-            <div class="flex-column med50">
-                <p class="fs-4 fw-bold prim-blue">Busca nuestras redes sociales</p>
-                <section class="social-buttons">
-                    <a href="https://www.facebook.com" target="_blank" class="social-button facebook">
-                      <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a href="https://www.instagram.com" target="_blank" class="social-button instagram">
-                      <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="https://t.me/yourchannel" target="_blank" class="social-button telegram">
-                      <i class="fab fa-telegram-plane"></i>
-                    </a>
-                    <a href="https://www.linkedin.com" target="_blank" class="social-button linkedin">
-                      <i class="fab fa-linkedin-in"></i>
-                    </a>
-                  </section>
-                  <p><i class="fas fa-map-marker-alt"></i> Calle 1 entre 3 y 4, La Habana, Cuba</p>
-                  <p><i class="fas fa-phone-alt"></i> (786) 458 8888</p>
             </div>
         </div>
-        </section>
-    </main>
+    </section>
 
-    <!-- Footer -->
-    <footer class="bg-dark bg-gradient text-white">
-        <div class="container">
-            <div class="d-flex justify-content-center align-items-center">
-            <p>&copy; 2025 To2Viajes S.U.R.L. Todos los derechos reservados.</p>
-            </div>
-        </div>
-    </footer>
+    <!-- Sección Hero -->
+    <section class="section grad-hero container-shadow">
+      <div class="container my-3 py-3">
+        <h3 class="text-xl text-lg-2xl">Servicio al cliente de excelencia</h3>
+        <p class="text-lg text-lg-xl">Estamos disponibles para ti en todo momento para ayudarte.</p>
+        <a href="#contact" class="cta-button primary">¡Contáctanos enseguida!</a>
+      </div>
+    </section>
+    <section class="services">
+      <div class="container mx-auto my-2">
+        <h2 class="text-xl">Nuestros servicios</h2>
+      </div>
+      <div class="carousel-container">
+          <button class="carousel-arrow prev">&#10094;</button>
+          
+          <div class="carousel-track">
+              <!-- Tarjetas de servicios -->
+              <div class="carousel-item">
+                  <div class="service-card">
+                      <h3>Servicio 1</h3>
+                      <p>Descripción del servicio 1</p>
+                  </div>
+              </div>
+              
+              <div class="carousel-item">
+                  <div class="service-card">
+                      <h3>Servicio 2</h3>
+                      <p>Descripción del servicio 2</p>
+                  </div>
+              </div>
+              
+              <div class="carousel-item">
+                  <div class="service-card">
+                      <h3>Servicio 2</h3>
+                      <p>Descripción del servicio 2</p>
+                  </div>
+              </div>
+              
+              <div class="carousel-item">
+                  <div class="service-card">
+                      <h3>Servicio 2</h3>
+                      <p>Descripción del servicio 2</p>
+                  </div>
+              </div>
+              
+              <div class="carousel-item">
+                  <div class="service-card">
+                      <h3>Servicio 2</h3>
+                      <p>Descripción del servicio 2</p>
+                  </div>
+              </div>
+              <!-- Añade más tarjetas según necesites -->
+          </div>
+          
+          <button class="carousel-arrow next">&#10095;</button>
+      </div>
+      
+      <div class="carousel-indicators"></div>
+  </section>
 
-    <!-- Script de JavaScript -->
-    <script src="js/main.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+  </main>
+
+<script src="js/main.js"></script>
 </body>
 </html>

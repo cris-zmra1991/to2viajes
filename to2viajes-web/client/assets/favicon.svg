@@ -2,14 +2,14 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="2400"
-   height="500"
-   viewBox="0 0 634.99998 132.29167"
+   width="850"
+   height="850"
+   viewBox="0 0 224.89582 224.89584"
    version="1.1"
    id="svg5"
    xml:space="preserve"
    inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
-   sodipodi:docname="logo.svg"
+   sodipodi:docname="favicon.svg"
    inkscape:export-filename="logo to2viajes.svg"
    inkscape:export-xdpi="96"
    inkscape:export-ydpi="96"
@@ -43,10 +43,10 @@
        originx="0"
        originy="0" /></sodipodi:namedview><defs
      id="defs2"><rect
-       x="892.96853"
+       x="892.96851"
        y="117.72254"
        width="1401.1854"
-       height="287.12815"
+       height="287.12814"
        id="rect7582" /><rect
        x="101.44611"
        y="594.0542"
@@ -61,7 +61,7 @@
      inkscape:groupmode="layer"
      id="layer1"><g
        id="g2598"
-       transform="matrix(1.8307405,0,0,1.8307405,-51.624982,-168.28126)"><g
+       transform="matrix(1.6288591,0,0,1.6288591,-29.249023,-95.41126)"><g
          id="g352"
          style="fill:#ab2f21;fill-opacity:1"
          transform="matrix(1.2528554,0,0,1.3689778,-10.700611,-42.847226)"><path
@@ -113,13 +113,4 @@
          height="3.2390368"
          x="30.902061"
          y="111.47821"
-         ry="1.6195184" /></g><text
-       xml:space="preserve"
-       transform="matrix(0.30352945,0,0,0.30352945,-18.838923,-9.994236)"
-       id="text7580"
-       style="font-weight:bold;font-stretch:semi-condensed;font-size:226.667px;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans Bold Semi-Condensed';white-space:pre;shape-inside:url(#rect7582);fill:#ab2f21"><tspan
-         x="892.96875"
-         y="323.96134"
-         id="tspan210"><tspan
-           style="font-stretch:normal;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans Bold'"
-           id="tspan208">To2Viajes</tspan></tspan></text></g></svg>
+         ry="1.6195184" /></g></g></svg>
