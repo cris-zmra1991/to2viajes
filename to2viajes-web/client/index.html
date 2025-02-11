@@ -31,112 +31,95 @@
     <link rel="stylesheet" href="css/main.css">
   </head>
 <body>
-  <div class="topp" id="inicio"></div>
-  <!-- Navbar HTML -->
-  <nav class="navbar">
-    <div class="navbar-container">
-        <!-- Logo -->
-        <a href="#" class="logo">
-            <img src="assets/logo.svg" alt="Logo">
-        </a>
-
-        <!-- Menú Desktop -->
-        <ul class="nav-menu">
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#about">Nosotros</a></li>
-            <li><a href="#servicios">Servicios</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-        </ul>
-
-        <!-- Botón Hamburguesa Mobile -->
-        <button class="hamburger">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </button>
-    </div>
-  </nav>
-  <header class="container-shadow">
-    <div class="banner">
+  <header class="shadow">
+    <div class="container mx-auto banner">
       <div class="banner-text">
-        <h1 class="text-xl text-lg-2xl mb-3">Tu Solución Integral</h1>
-        <p class="text-lg text-lg-xl mb-2">Soluciones personalizadas en transporte de mercancía, venta de productos y mucho más. ¡Simplifica tu vida!</p>
-        <a href="#contact" class="cta-button primary">¡Descubre Más!</a>
+        <h1 class="mb-2">Tu Solución Integral</h1>
+        <p class="h3 mb-3">Soluciones personalizadas en transporte de mercancía, venta de productos y mucho más. ¡Simplifica tu vida!</p>
+        <a class="cta-button button-primary mb-3">Descubre mas</a>
       </div>
       <div class="banner-image">
-        <img src="assets/repartidor-cajas-paqueteria.webp">
+        <img src="assets/repartidor-cajas-paqueteria.webp" alt="Repartidor entregando cajas de paqueteria">
       </div>
     </div>
-    <div class="bottomm" id="about"></div>
   </header>
-
-  <!-- Sección Sobre Nosotros -->
+  <div class="navegacion">
+    <div class="container mx-auto">
+      <nav>
+        <div><img src="assets/logo.svg"></div>
+        <ul>
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#">Servicios</a></li>
+          <li><a href="#">Productos</a></li>
+          <li><a href="#">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
   <main>
-    <section class="section">
-        <div class="container my-5">
-            <div class="grid-container">
-                <div class="grid-col-8">
-                    <h2 class="text-xl">Sobre Nosotros</h2>
-                    <p class="text-lg">Bienvenidos a To2Viajes S.U.R.L, su aliado confiable en Cuba para la adquisición y entrega de productos de todo tipo. Nos especializamos en ofrecer soluciones personalizadas en transporte de mercancías y venta de productos, adaptándonos a las necesidades específicas de cada cliente, ya sean empresas o particulares.</p>
-                </div>
-                <div class="grid-col-4">
-                    <div class="container-shadow container-fit radius-1"><img class="m-2 img-about" src="assets/delivery-man-receiver-door.jpg" alt="Entrega de productos en Cuba" class="img-fluid"></div>
-                </div>
-            </div>
+    <section id="about">
+      <div class="container mx-auto flex-row">
+        <div class="about-img shadow">
+          <img src="assets/delivery-man-receiver-door.jpg" alt="Entrega de paquetes">
         </div>
+        <div class="about-content">
+          <h2 class="text-primary mb-2">Sobre Nosotros</h2>
+          <p class="h4">Bienvenidos a To2Viajes S.U.R.L, su aliado confiable en Cuba para la adquisición y entrega de productos de todo tipo. Nos especializamos en ofrecer soluciones personalizadas en transporte de mercancías y venta de productos, adaptándonos a las necesidades específicas de cada cliente, ya sean empresas o particulares.</p>
+        </div>
+      </div>
     </section>
-
     <!-- Sección Hero -->
-    <section class="section grad-hero container-shadow">
-      <div class="container my-3 py-3">
-        <h3 class="text-xl text-lg-2xl">Servicio al cliente de excelencia</h3>
-        <p class="text-lg text-lg-xl">Estamos disponibles para ti en todo momento para ayudarte.</p>
-        <a href="#contact" class="cta-button primary">¡Contáctanos enseguida!</a>
+    <section id="hero" class="grad-hero shadow">
+      <div class="container mx-auto flex-col">
+        <h3 class="h3 mb-2">Servicio al cliente de excelencia</h3>
+        <p class="h4 mb-2">Estamos disponibles para ti en todo momento para ayudarte.</p>
+        <a href="#contact" class="cta-button button-secondary">¡Contáctanos enseguida!</a>
       </div>
     </section>
-    <section class="services">
-      <div class="container mx-auto my-2">
-        <h2 class="text-xl">Nuestros servicios</h2>
-      </div>
+    <section id="services">
+      <div class="container mx-auto">
+        <h2 class="text-primary">Nuestros servicios</h2>
+      
       <div class="carousel-container">
           <button class="carousel-arrow prev">&#10094;</button>
-          
           <div class="carousel-track">
-              <!-- Tarjetas de servicios -->
-              <div class="carousel-item">
-                  <div class="service-card">
-                      <h3>Servicio 1</h3>
-                      <p>Descripción del servicio 1</p>
-                  </div>
+            <!-- Tarjetas de servicios -->
+            <div class="carousel-item">
+              <div class="service-card">
+                <h3>Servicio 1</h3>
+                <p>Descripción del servicio 1</p>
               </div>
-              
-              <div class="carousel-item">
-                  <div class="service-card">
-                      <h3>Servicio 2</h3>
-                      <p>Descripción del servicio 2</p>
-                  </div>
+            </div>
+            <div class="carousel-item">
+              <div class="service-card">
+                <h3>Servicio 1</h3>
+                <p>Descripción del servicio 1</p>
               </div>
-              
-              <div class="carousel-item">
-                  <div class="service-card">
-                      <h3>Servicio 2</h3>
-                      <p>Descripción del servicio 2</p>
-                  </div>
+            </div>
+            <div class="carousel-item">
+              <div class="service-card">
+                <h3>Servicio 1</h3>
+                <p>Descripción del servicio 1</p>
               </div>
-              
-              <div class="carousel-item">
-                  <div class="service-card">
-                      <h3>Servicio 2</h3>
-                      <p>Descripción del servicio 2</p>
-                  </div>
+            </div>
+            <div class="carousel-item">
+              <div class="service-card">
+                <h3>Servicio 1</h3>
+                <p>Descripción del servicio 1</p>
               </div>
-              
-              <div class="carousel-item">
-                  <div class="service-card">
-                      <h3>Servicio 2</h3>
-                      <p>Descripción del servicio 2</p>
-                  </div>
+            </div>
+            <div class="carousel-item">
+              <div class="service-card">
+                <h3>Servicio 1</h3>
+                <p>Descripción del servicio 1</p>
               </div>
+            </div>
+            <div class="carousel-item">
+              <div class="service-card">
+                <h3>Servicio 1</h3>
+                <p>Descripción del servicio 1</p>
+              </div>
+            </div>
               <!-- Añade más tarjetas según necesites -->
           </div>
           
@@ -144,9 +127,12 @@
       </div>
       
       <div class="carousel-indicators"></div>
+    </div>
   </section>
-
   </main>
+  <footer>
+
+  </footer>
 
 <script src="js/main.js"></script>
 </body>
